@@ -22,7 +22,7 @@ Tools to perform automatic online tests using MQTT
 - Disconnect the Subscriber and the Publisher notebooks from the MQTT broker
 - Repeat previous steps for the glitched version
 
-# some considerations
+# additional comments
 
 - A demonstration with the LabEAD testbench and broker deployed in the University of São Paulo may also be scheduled upon request
 - These notebooks can also be used to perform automatized tests using the MQTT protocol with an open MQTT broker (but it would have no authentication), or with a broker deployed in a local environment 
