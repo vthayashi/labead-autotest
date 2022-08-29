@@ -12,15 +12,15 @@ Tools to perform automatic online tests using MQTT
 
 # how to use
 
-- Clone this repo
-- Generate the bitstream of the correct and glitched versions of the 4-bit adder
-- Deploy the correct version of the 4-bit adder to the FPGA board
-- Make sure the LabEAD testbench is online
-- Begin MQTT connection of the Subscriber notebook
-- Begin MQTT connection of the Publisher notebook
-- Perform the tests using the Publisher notebook
-- Disconnect the Subscriber and the Publisher notebooks from the MQTT broker
-- Repeat previous steps for the glitched version
+- Clone this repo.
+- With a digital design tool such as Quartus Prime or Xilinx Vivado, create a project corresponding to the correct 4-bit adder. Move the three VHDL files located in the “correct” folder to the project folder.
+- Compile the project, generating the corresponding bitstream.
+- Deploy the correct version of the 4-bit adder to the FPGA board (load the bitstream).
+- Open the Subscriber-LabEAD-MQTT.ipynb file on a notebook environment such as Jupyter Notebook or Google Colab.
+- Open the Publisher-LabEAD-MQTT.ipynb on a notebook environment such as Jupyter Notebook or Google Colab.
+- With both notebook files opened at the same time, start by running the Subscriber notebook file, which is going to wait for the Publisher messages. After that, run the Publisher file, which will send the messages.
+- Close both files, disconnecting the Subscriber and the Publisher notebooks from the MQTT broker.
+- Repeat previous steps for the glitched version. The VHDL files are located in the bug folder.
 
 # additional comments
 
